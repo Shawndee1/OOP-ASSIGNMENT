@@ -1,0 +1,58 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+struct Student
+{
+    int serialNumber;
+    string firstName;
+    string courseOfStudy;
+    char mathGrade;
+    char englishGrade;
+    char physicsGrade;
+    char computerStudiesGrade;
+};
+
+int main()
+{
+    const int NUM_STUDENTS = 5;
+    Student students[NUM_STUDENTS];
+
+    // Read student details from the user
+    for (int i = 0; i < NUM_STUDENTS; i++)
+    {
+        cout << "Enter details for student " << i + 1 << ":\n";
+        cout << "Serial Number: ";
+        cin >> students[i].serialNumber;
+        cout << "First Name: ";
+        cin >> students[i].firstName;
+        cout << "Course of Study: ";
+        cin >> students[i].courseOfStudy;
+        cout << "Grade in Maths: ";
+        cin >> students[i].mathGrade;
+        cout << "Grade in English: ";
+        cin >> students[i].englishGrade;
+        cout << "Grade in Physics: ";
+        cin >> students[i].physicsGrade;
+        cout << "Grade in Computer Studies: ";
+        cin >> students[i].computerStudiesGrade;
+        cout << "\n";
+    }
+
+    // Print student records
+    cout << "Student Records:\n";
+    for (int i = 0; i < NUM_STUDENTS; i++)
+    {
+        cout << "Serial Number: " << students[i].serialNumber << "\n";
+        cout << "First Name: " << students[i].firstName << "\n";
+        cout << "Student " << i + 1 << ":\n";
+        cout << "Course of Study: " << students[i].courseOfStudy << "\n";
+        cout << "Grade in Maths: " << students[i].mathGrade << "\n";
+        cout << "Grade in English: " << students[i].englishGrade << "\n";
+        cout << "Grade in Physics: " << students[i].physicsGrade << "\n";
+        cout << "Grade in Computer Studies: " << students[i].computerStudiesGrade << "\n";
+        cout << "\n";
+    }
+
+    return 0;
+}
